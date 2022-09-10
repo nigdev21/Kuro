@@ -14,5 +14,7 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [PostController::class, 'index'])->name('index');
 Route::get('post/{id}', [PostController::class, 'post'])->name('post');
+Route::get('postCreatePage', [PostController::class, 'postCreatePage'])->name('postCreatePage');
+Route::post('postCreate', [PostController::class, 'postCreate'])->name('postCreate');
